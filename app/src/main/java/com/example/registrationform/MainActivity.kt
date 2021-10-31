@@ -33,12 +33,16 @@ class MainActivity : AppCompatActivity() {
         val con4 = st4.toDoubleOrNull()
         if (con1 == null || con2 == null || con3 == null || con4 == null) {
             binding.tipResult.text = "Failed"
-            return }else if (con1 != null || con2 != null || con3 != null || con4 != null){ binding.tipResult.text = "Success"}
+            return }else if (con1 != null || con2 != null || con3 != null || con4 != null){ binding.tipResult.text = "Success"
+            return}
 
 //heck if the 2 password are same
         val passcheck = binding.password.text.toString()
         val passcheck1 = binding.rePassword.text.toString()
-        if(passcheck==passcheck1) binding.tipResult.text = "Success"
+        if(passcheck==passcheck1){
+            binding.tipResult.text = "Success"
+            return
+        }
 
 
     }
