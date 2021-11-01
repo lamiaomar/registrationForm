@@ -40,6 +40,12 @@ class MainActivity : AppCompatActivity() {
             binding.tipResult.text = "Success"
             return
         }else  binding.tipResult.text = "Failed"
+//display the information
+
+  binding.tipResultInfo.setText("Name :${binding.name.text.toString()} \n" +
+          "Email :${binding.email.text.toString()} \n"+
+          "DOB :${binding.email.text.toString()}")
+
 
 
     }
