@@ -27,22 +27,19 @@ class MainActivity : AppCompatActivity() {
         val st2 = binding.email.text.toString()
         val st3 = binding.password.text.toString()
         val st4 = binding.rePassword.text.toString()
-        val con1 = st1.toDoubleOrNull()
-        val con2 = st2.toDoubleOrNull()
-        val con3 = st3.toDoubleOrNull()
-        val con4 = st4.toDoubleOrNull()
-        if (con1 == null || con2 == null || con3 == null || con4 == null) {
+
+        if (st1 == "" || st2 == "" || st3 == "" || st4 == "") {
             binding.tipResult.text = "Failed"
-            return }else if (con1 != null || con2 != null || con3 != null || con4 != null){ binding.tipResult.text = "Success"
+            return }
+        else if (st1 != "" || st2 != "" || st3 != "" || st4 != ""){ binding.tipResult.text = "Success"
             return}
 
 //heck if the 2 password are same
-        val passcheck = binding.password.text.toString()
-        val passcheck1 = binding.rePassword.text.toString()
-        if(passcheck==passcheck1){
+
+        if(st3==st4){
             binding.tipResult.text = "Success"
             return
-        }
+        }else  binding.tipResult.text = "Failed"
 
 
     }
