@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">"نجاح او فشل "</string>
+    <string name="app_name1" translatable="false">"المعلومات المسجلة  "</string>
+    <string name="app_name3">نجاح</string>
+    <string name="app_name5">فشل</string>
+    <string name="String_Name"> ادخل الاسم</string>
+    <string name="String_Email">ادخل الاميل</string>
+    <string name="String_pass">ادخل كلمة المرور</string>
+    <string name="String_Repass">اعادة كلمة المرور</string>
+    <string name="String_dob">تاريخ الميلاد</string>
+    <string name="genderF">انثى</string>
+    <string name="genderM">ذكر</string>
+    <string name="String_regis">تسجيل</string>
+</resources>

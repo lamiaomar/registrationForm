@@ -1,5 +1,18 @@
 <resources>
-    <string name="app_name" translatable="false">Success or Failed</string>
-    <string name="app_name1" translatable="false">"Name : \nEmail : \nDOB : "</string>
+    <string name="app_name">Success or Failed</string>
+    <string name="app_name1">"Name : \nEmail : \nDOB : "</string>
+    <string name="app_name3">success</string>
+    <string name="String_Name" >Name</string>
+    <string name="String_Email" >Enter the Email</string>
+    <string name="String_pass" >Enter the Pass</string>
+    <string name="String_Repass" >Re-Enter the Pass</string>
+    <string name="String_dob" >Date Of Birth</string>
+    <string name="app_name5">Failed</string>
+    <string name="genderF" >Female</string>
+    <string name="genderM" >Male</string>
+    <string name="String_regis" >Register</string>
+
+
+
 
 </resources>

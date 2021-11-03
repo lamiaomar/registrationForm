@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -44,10 +43,10 @@ class MainActivity : AppCompatActivity() {
         val st4 = binding.rePassword.text.toString()
 
         if (st1 == "" || st2 == "" || st3 == "" || st4 == "") {
-            binding.tipResult.text = "Failed"
+            binding.tipResult.text =getString(R.string.app_name5)
             return }
         else if (st1 != "" || st2 != "" || st3 != "" || st4 != ""){
-            binding.tipResult.text = "Success"
+            binding.tipResult.text =getString(R.string.app_name3)
             binding.tipResultInfo.text= "Name :${binding.name.text.toString()} \n" +
                     "Email :${binding.email.text.toString()} \n"+
                     "DOB :${binding.DOB.text.toString()} \n"
@@ -56,9 +55,9 @@ class MainActivity : AppCompatActivity() {
 //heck if the 2 password are same
 
         if(st3==st4){
-            binding.tipResult.text = "Success"
+            binding.tipResult.text = getString(R.string.app_name3)
             return
-        }else  {binding.tipResult.text = "Failed"
+        }else  {binding.tipResult.text = getString(R.string.app_name5)
         return}
 
 
