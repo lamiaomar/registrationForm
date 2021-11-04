@@ -69,8 +69,7 @@
                 android:layout_width="160dp"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="232dp"
-                android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
-                android:inputType="textPassword" />
+                android:drawableLeft="@drawable/ic_baseline_vpn_key_24" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -89,8 +88,7 @@
                 android:layout_width="160dp"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="232dp"
-                android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
-                android:inputType="textPassword" />
+                android:drawableLeft="@drawable/ic_baseline_vpn_key_24" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

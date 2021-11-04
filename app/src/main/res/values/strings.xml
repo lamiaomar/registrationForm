@@ -1,16 +1,18 @@
 <resources>
     <string name="app_name">Success or Failed</string>
     <string name="app_name1">"Name : \nEmail : \nDOB : "</string>
-    <string name="app_name3">success</string>
+    <string name="app_succ">success</string>
     <string name="String_Name" >Name</string>
     <string name="String_Email" >Enter the Email</string>
     <string name="String_pass" >Enter the Pass</string>
     <string name="String_Repass" >Re-Enter the Pass</string>
     <string name="String_dob" >Date Of Birth</string>
-    <string name="app_name5">Failed</string>
+    <string name="app_fai">Failed</string>
     <string name="genderF" >Female</string>
     <string name="genderM" >Male</string>
     <string name="String_regis" >Register</string>
+    <string name="passChS" translatable="false">Password not match</string>
+    <string name="emilChS" translatable="false">Email not correct</string>
 
 
 

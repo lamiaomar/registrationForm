@@ -13,7 +13,7 @@ import com.example.registrationform.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-   private lateinit var binding : ActivityMainBinding
+    lateinit var binding : ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.registr.setOnClickListener{checkButton()}
+        binding.registr.setOnClickListener{check()}
         binding.name.setOnKeyListener { view, keyCode, _ -> handleKeyEvent(view, keyCode)}
         binding.email.setOnKeyListener { view, keyCode, _ -> handleKeyEvent(view, keyCode)}
         binding.password.setOnKeyListener { view, keyCode, _ -> handleKeyEvent(view, keyCode)}
@@ -30,43 +30,28 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
     }
 
-    @SuppressLint("SetTextI18n")
-    fun checkButton(){
+    fun check (){
+        val nameVar = binding.name.text.toString()
+        val emailVar = binding.email.text.toString()
+        val passVar = binding.password.text.toString()
+        val repassVar = binding.rePassword.text.toString()
 
-//check if all are not empty
-        val st1 = binding.name.text.toString()
-        val st2 = binding.email.text.toString()
-        val st3 = binding.password.text.toString()
-        val st4 = binding.rePassword.text.toString()
-
-        if (st1 == "" || st2 == "" || st3 == "" || st4 == "") {
-            binding.tipResult.text =getString(R.string.app_name5)
-            return }
-        else if (st1 != "" || st2 != "" || st3 != "" || st4 != ""){
-            binding.tipResult.text =getString(R.string.app_name3)
-            binding.tipResultInfo.text= "Name :${binding.name.text.toString()} \n" +
-                    "Email :${binding.email.text.toString()} \n"+
-                    "DOB :${binding.DOB.text.toString()} \n"
-            return}
-
-//heck if the 2 password are same
-
-        if(st3==st4){
-            binding.tipResult.text = getString(R.string.app_name3)
-            return
-        }else  {binding.tipResult.text = getString(R.string.app_name5)
-        return}
+        if (nameVar.isNotEmpty() && emailVar.isNotEmpty() && passVar.isNotEmpty() && repassVar.isNotEmpty()){
+               if (passVar == repassVar){
+                   if (emailVar.contains('@')&& emailVar.contains(".")){
+                       binding.tipResult.text=getString(R.string.app_succ)
+                   }
+                   else { binding.tipResult.text = getString(R.string.emilChS)}
+               }
+               else { binding.tipResult.text = getString(R.string.passChS) }
+        }
+        else {
+            binding.tipResult.text = getString(R.string.app_fai)
+        } }
 
 
-
-
-
-
-
-    }
     private fun handleKeyEvent(view: View, keyCode: Int): Boolean {
         if (keyCode == KeyEvent.KEYCODE_ENTER) {
             // Hide the keyboard
