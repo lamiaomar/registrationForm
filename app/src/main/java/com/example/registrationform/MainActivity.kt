@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         val emailVar = binding.email.text.toString()
         val passVar = binding.password.text.toString()
         val repassVar = binding.rePassword.text.toString()
+        val dobVar = binding.DOB.text.toString()
 
         if (nameVar.isNotEmpty() && emailVar.isNotEmpty() && passVar.isNotEmpty() && repassVar.isNotEmpty()){
                if (passVar == repassVar){
@@ -49,7 +50,16 @@ class MainActivity : AppCompatActivity() {
         }
         else {
             binding.tipResult.text = getString(R.string.app_fai)
-        } }
+        }
+
+        binding.tipResultInfo.setText("Name : $nameVar \n"+
+                                      "Email : $emailVar \n"+
+                                      "DOB : $dobVar ")
+    }
+
+
+
+
 
 
     private fun handleKeyEvent(view: View, keyCode: Int): Boolean {

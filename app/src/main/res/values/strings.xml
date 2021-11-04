@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Success or Failed</string>
-    <string name="app_name1">"Name : \nEmail : \nDOB : "</string>
+    <string name="app_name1" translatable="false">"Name : \nEmail : \nDOB : "</string>
     <string name="app_succ">success</string>
     <string name="String_Name" >Name</string>
     <string name="String_Email" >Enter the Email</string>
